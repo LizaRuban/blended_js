@@ -181,7 +181,7 @@
 //     hobby: "tenis",
 //     premium: true,
 // };
-  
+
 // user.mood = 'happy';
 // user.hobby = 'skydiving';
 // user.premium = false;
@@ -203,7 +203,7 @@
 //     Poly: 160,
 //     Ajax: 1470,
 // };
-  
+
 // function SumOfSalaries (salaries)
 // {
 //     let sum = 0;
@@ -214,7 +214,7 @@
 //         }
 //     return sum;
 // }
-  
+
 // console.log(SumOfSalaries (salaries));
 
 // Task #9
@@ -304,7 +304,7 @@
 //     { id: "player-4", name: "Ajax", timePlayed: 150, points: 71, online: false },
 //     { id: "player-5", name: "Chelsy", timePlayed: 80, points: 48, online: true },
 // ];
-  
+
 // // Збільшуємо кількість годин гравця за id
 // const playerId = "player-3";
 
@@ -341,91 +341,91 @@
 // delete(name) - видаляє контакт з заданим ім'ям;
 // updateName(oldName, newName) - зиінює ім'я контакта;
 
-const phonebook = {
-    contacts: [],
+// const phonebook = {
+//     contacts: [],
 
-    add ( data )
-    {
-        const contact = {
-            category: "default",
-            ...data,
-            id: this.generateId(),
-            createdAt: this.getDate(),
-        };
-        this.contacts.push( contact );
-    },
+//     add ( data )
+//     {
+//         const contact = {
+//             category: "default",
+//             ...data,
+//             id: this.generateId(),
+//             createdAt: this.getDate(),
+//         };
+//         this.contacts.push( contact );
+//     },
 
-    list ()
-    {
-        console.table( this.contacts );
-    },
+//     list ()
+//     {
+//         console.table( this.contacts );
+//     },
 
-    filtered ( category )
-    {
-        const result = [];
-        for ( const contact of this.contacts )
-        {
-            if ( contact.category === category )
-            {
-                result.push( contact );
-            }
-        }
-        return result;
-    },
+//     filtered ( category )
+//     {
+//         const result = [];
+//         for ( const contact of this.contacts )
+//         {
+//             if ( contact.category === category )
+//             {
+//                 result.push( contact );
+//             }
+//         }
+//         return result;
+//     },
 
-    delete ( name )
-    {
-        for ( let i = 0; i < this.contacts.length; i += 1 )
-        {
-            if ( this.contacts[ i ].name === name )
-            {
-                this.contacts.splice( i, 1 );
-                return;
-            }
-        }
-    },
+//     delete ( name )
+//     {
+//         for ( let i = 0; i < this.contacts.length; i += 1 )
+//         {
+//             if ( this.contacts[ i ].name === name )
+//             {
+//                 this.contacts.splice( i, 1 );
+//                 return;
+//             }
+//         }
+//     },
 
-    updateName ( oldName, newName )
-    {
-        for ( const contact of this.contacts )
-        {
-            if ( contact.name === oldName )
-            {
-                contact.name = newName;
-                return;
-            }
-        }
-    },
+//     updateName ( oldName, newName )
+//     {
+//         for ( const contact of this.contacts )
+//         {
+//             if ( contact.name === oldName )
+//             {
+//                 contact.name = newName;
+//                 return;
+//             }
+//         }
+//     },
 
-    generateId ()
-    {
-        return "#" + Math.random().toString( 36 ).substr( 2, 9 );
-    },
+//     generateId ()
+//     {
+//         return "#" + Math.random().toString( 36 ).substr( 2, 9 );
+//     },
 
-    getDate ()
-    {
-        return Date.now();
-    },
-};
+//     getDate ()
+//     {
+//         return Date.now();
+//     },
+// };
 
-phonebook.add( {
-    name: "Mango",
-    email: "mango@mail.com",
-    category: "friends",
-});
+// phonebook.add( {
+//     name: "Mango",
+//     email: "mango@mail.com",
+//     category: "friends",
+// });
 
-phonebook.add( {
-    name: "Poly",
-    email: "poly@hotmail.com",
-} );
-    
-phonebook.add( {
-    name: "Katy",
-    email: "katy@hotmail.com",
-    category: "friends",
-} );
+// phonebook.add( {
+//     name: "Poly",
+//     email: "poly@hotmail.com",
+// } );
 
-phonebook.delete("Mango");
-phonebook.updateName("Poly", "Sara");
-console.log(phonebook.filtered("friends"));
-phonebook.list(); 
+// phonebook.add( {
+//     name: "Katy",
+//     email: "katy@hotmail.com",
+//     category: "friends",
+// } );
+
+// phonebook.delete("Mango");
+// phonebook.updateName("Poly", "Sara");
+// console.log(phonebook.filtered("friends"));
+// phonebook.list();

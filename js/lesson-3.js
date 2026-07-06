@@ -281,3 +281,25 @@
 // const employee = new Employee(data);
 // // console.log(employee.getDetails());
 // console.log(employee.getEmployeeDetails());
+
+//Підрахунок кількості повторень
+//Дано масив:
+const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
+// //Завдання: За допомогою reduce підрахуйте, скільки разів кожен фрукт зустрічається в масиві.
+// //Очікуваний результат:
+// //{
+//  // apple: 3,
+//  // banana: 2,
+//  // orange: 1
+// //}
+
+// const result = fruits.reduce((acc, fruit) => {
+//   if (acc[fruit]) {
+//     acc[fruit]++;
+//   } else {
+//     acc[fruit] = 1;
+//   }
+//   return acc;
+// }, {});
+
+// console.log(result);
